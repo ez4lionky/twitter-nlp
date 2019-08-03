@@ -12,8 +12,8 @@ train_fm = args.train_fm
 test_fm = args.test_fm
 
 task = 'topic'
-is_nltk = True
-max_vocabulary = 300
+is_nltk = False
+max_vocabulary = 100
 
 data, label, len_train, len_test = data_process(train_fm, test_fm, task, is_nltk)
 data = feature_extract(data, max_vocabulary).todense()
